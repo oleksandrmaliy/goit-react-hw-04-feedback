@@ -1,15 +1,14 @@
 // import PropTypes from 'prop-types';
-// import {
+// import {} from './Statistics.styled';
 
 import React, { Component } from "react"
 
  
-// } from './Statistics.styled';
+
 
 export class Statistics extends Component {
 
-    // total = this.props.good + this.props.neutral + this.props.bad;
-
+   
     render() {
         return (
             <div>
