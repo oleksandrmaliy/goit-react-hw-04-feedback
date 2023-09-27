@@ -3,10 +3,7 @@
 
 import React, { Component } from "react"
 
- 
-
-
-export class Statistics extends Component {
+class Statistics extends Component {
 
    
     render() {
@@ -26,6 +23,8 @@ export class Statistics extends Component {
         )
     }
 }
+
+export default Statistics;
 
 // Feedback.propTypes = {
  

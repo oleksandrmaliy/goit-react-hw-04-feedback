@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Feedback } from "./Feedback/Feedback";
-import { Statistics } from "./Statistics/Statistics";
+import Feedback from './components/Feedback/';
+import Statistics from './components/Statistics/';
 
 
 
@@ -9,8 +9,8 @@ export class App extends Component {
   state = {
   good: 0,
   neutral: 0,
-    bad: 0,
-    }
+  bad: 0,
+  }
 
   countTotalFeedback = () => {
   const { good, neutral, bad } = this.state;
@@ -25,7 +25,7 @@ export class App extends Component {
 
 handleGood = () => {
         this.setState(prevState => ({
-            good: prevState.good + 1})            
+            good: prevState.good + 1})  
         );
   }
   

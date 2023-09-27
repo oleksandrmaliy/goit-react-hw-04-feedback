@@ -3,15 +3,13 @@
 
 import React, { Component } from "react"
 
- export class Feedback extends Component {
+class Feedback extends Component {
      render() {
         return (
             <div>
                 <p>Please leave feedback</p>
                 <div>
-                    <button type="button" onClick={this.props.handleGood}>
-                        Good
-                    </button>
+                    <button type="button" onClick={this.props.handleGood}>Good</button>
                     <button type="button" onClick={this.props.handleNeutral}>Neutral</button>
                     <button type="button" onClick={this.props.handleBad}>Bad</button>
                 </div>
@@ -19,7 +17,9 @@ import React, { Component } from "react"
            </div>
               )
     }
-}
+};
+
+export default Feedback;
 
 // Feedback.propTypes = {
  
