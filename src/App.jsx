@@ -22,24 +22,11 @@ export class App extends Component {
     return Math.round((good * 100 ) / this.countTotalFeedback());
   }
 
-
-handleGood = () => {
-        this.setState(prevState => ({
-            good: prevState.good + 1})  
-        );
-  }
-  
-handleNeutral = () => {
-        this.setState(prevState => ({
-            neutral: prevState.neutral + 1})            
-        );
-  }
-
-handleBad = () => {
-        this.setState(prevState => ({
-            bad: prevState.bad + 1})            
-        );
-  }
+  handleButtonIncrement = (option) => {
+        this.setState(prevState => (
+         {[option]: prevState[option] + 1}
+        ))
+}
 
   render() {
    
@@ -48,9 +35,9 @@ handleBad = () => {
     return (
       <div>
         <Feedback
-          handleGood={this.handleGood}
-          handleNeutral={this.handleNeutral}
-          handleBad={this.handleBad} />
+          handleButtonIncrement={this.handleButtonIncrement}
+          options={Object.keys(this.state)}
+        />
         
         {(this.countTotalFeedback() > 0) && <Statistics
           good={good}
