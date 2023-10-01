@@ -1,15 +1,15 @@
 import PropTypes from 'prop-types';
-// import {} from './Feedback.styled';
+import {FbOpt} from './FeedbackOptions.styled';
 
 function FeedbackOptions ({options, onLeaveFeedback}){
     return(
-        <div>
+        <FbOpt>
             {options.map(option => (
                 <button type='button' key={option} onClick={() => onLeaveFeedback(option)}>
                     {capitalize(option)}
                 </button>
             ))}
-        </div>
+        </FbOpt>
     )
 }
 

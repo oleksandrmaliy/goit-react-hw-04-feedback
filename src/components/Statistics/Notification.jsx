@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
-// import {} from './Feedback.styled';
+import {Msg} from './Notification.styled';
 
 function Notification ({message}){
     return (
-        <p>{message}</p>
+        <Msg>{message}</Msg>
         )
     }
 

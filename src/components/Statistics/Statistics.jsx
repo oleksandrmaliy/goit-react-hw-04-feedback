@@ -1,12 +1,11 @@
 import PropTypes from 'prop-types';
-// import {} from './Statistics.styled';
 
-import Section from '../SectionTitle';
 import Notification from './Notification';
+import {StatBlock} from './Statistics.styled';
 
 function Statistics ({ good, neutral, bad, total, positive }) {
         return (
-            <Section title='Statistics'>
+            <StatBlock>
                 {total > 0 ? 
                     <div>
                         <p>Good: {good}</p>
@@ -17,7 +16,7 @@ function Statistics ({ good, neutral, bad, total, positive }) {
                     </div> :
                     <Notification message="There is no feedback"/>
                 }
-            </Section>
+            </StatBlock>
         )
     }
 

@@ -1,17 +1,14 @@
 import PropTypes from 'prop-types';
-// import {} from './Feedback.styled';
+import {FbDiv} from './Feedback.styled';
 
-import Section from '../SectionTitle';
 import FeedbackOptions from './FeedbackOptions'
 
 function Feedback ({options, onLeaveFeedback}){
     return (
-        <div>
-            <Section title='Please leave feedback'>
+        <FbDiv>
                 <FeedbackOptions options={options} onLeaveFeedback={onLeaveFeedback}/>
-            </Section>
-        </div>)
-    }
+        </FbDiv>
+    )}
 
 export default Feedback;
 
