@@ -1,7 +1,7 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 // import {} from './Feedback.styled';
 
-import Section from '../SectionTitle/SectionTitle';
+import Section from '../SectionTitle';
 import FeedbackOptions from './FeedbackOptions'
 
 function Feedback ({options, onLeaveFeedback}){
@@ -15,8 +15,7 @@ function Feedback ({options, onLeaveFeedback}){
 
 export default Feedback;
 
-
-
-// Feedback.propTypes = {
- 
-// };
+Feedback.propTypes = {
+     options: PropTypes.array.isRequired,
+     onLeaveFeedback: PropTypes.func.isRequired,
+     };

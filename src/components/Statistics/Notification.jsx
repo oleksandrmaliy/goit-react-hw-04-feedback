@@ -1,12 +1,14 @@
-
+import PropTypes from 'prop-types';
+// import {} from './Feedback.styled';
 
 function Notification ({message}){
     return (
-        <div>
-            <p>{message}</p>
-        </div>)
+        <p>{message}</p>
+        )
     }
 
 export default Notification;
 
-// const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1);
+Notification.propTypes = {
+    message: PropTypes.string.isRequired,
+};

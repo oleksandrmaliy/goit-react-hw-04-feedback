@@ -1,10 +1,6 @@
 import React, { Component } from "react";
 import Feedback from './components/Feedback/';
 import Statistics from './components/Statistics/';
-// import Section from './components/SectionTitle';
-// import Notification from './components/Notification';
-
-
 
 export class App extends Component {
   
@@ -40,7 +36,6 @@ export class App extends Component {
           onLeaveFeedback={this.onLeaveFeedback}
           options={Object.keys(this.state)}
         />
-
         
         <Statistics
           good={good}
@@ -48,7 +43,6 @@ export class App extends Component {
           bad={bad}
           total={this.countTotalFeedback()}
           positive={this.countPositiveFeedbackPercentage()} /> 
-
       </div>
     )
   }

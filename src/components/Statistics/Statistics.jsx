@@ -1,7 +1,7 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 // import {} from './Statistics.styled';
 
-import Section from '../SectionTitle/SectionTitle';
+import Section from '../SectionTitle';
 import Notification from './Notification';
 
 function Statistics ({ good, neutral, bad, total, positive }) {
@@ -23,6 +23,10 @@ function Statistics ({ good, neutral, bad, total, positive }) {
 
 export default Statistics;
 
-// Feedback.propTypes = {
- 
-// };
+Statistics.propTypes = {
+    good: PropTypes.number.isRequired,
+    neutral: PropTypes.number.isRequired,
+    bad: PropTypes.number.isRequired,
+    total: PropTypes.number.isRequired,
+    positive: PropTypes.number.isRequired,
+};

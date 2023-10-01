@@ -1,4 +1,4 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 // import { StyledSection, Title } from './Section.styled';
 
@@ -13,10 +13,10 @@ function Section({ title, children }) {
 
 export default Section;
 
-// Section.propTypes = {
-//   title: PropTypes.string,
-//   children: PropTypes.object.isRequired,
-// };
+Section.propTypes = {
+  title: PropTypes.string,
+  children: PropTypes.object.isRequired,
+};
 
 
 
