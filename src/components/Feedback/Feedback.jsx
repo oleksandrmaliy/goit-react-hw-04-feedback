@@ -1,23 +1,21 @@
 // import PropTypes from 'prop-types';
 // import {} from './Feedback.styled';
 
-function Feedback ({options, handleButtonIncrement}){
+import Section from '../SectionTitle/SectionTitle';
+import FeedbackOptions from './FeedbackOptions'
+
+function Feedback ({options, onLeaveFeedback}){
     return (
         <div>
-            <p>Please leave feedback</p>
-                <div>
-                    {options.map(option => (
-                        <button type='button' key={option} onClick={() => handleButtonIncrement(option)}>
-                            {capitalize(option)}
-                        </button>
-                    ))}
-                </div>
+            <Section title='Please leave feedback'>
+                <FeedbackOptions options={options} onLeaveFeedback={onLeaveFeedback}/>
+            </Section>
         </div>)
     }
 
 export default Feedback;
 
-const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1);
+
 
 // Feedback.propTypes = {
  

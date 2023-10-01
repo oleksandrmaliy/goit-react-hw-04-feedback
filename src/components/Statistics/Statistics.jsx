@@ -1,28 +1,25 @@
 // import PropTypes from 'prop-types';
 // import {} from './Statistics.styled';
 
-import React, { Component } from "react"
+import Section from '../SectionTitle/SectionTitle';
+import Notification from './Notification';
 
-class Statistics extends Component {
-
-   
-    render() {
+function Statistics ({ good, neutral, bad, total, positive }) {
         return (
-            <div>
-                <p>Statistics</p>
-                <div>
-                    <p>Good: {this.props.good}</p>
-                    <p>Neutral: {this.props.neutral}</p>
-                    <p>Bad: {this.props.bad}</p>
-                    <p>Total: {this.props.total}</p>
-                    <p>Positive feedback: { }{this.props.positive}%</p>
-                </div>
-         
-            </div>
-      
+            <Section title='Statistics'>
+                {total > 0 ? 
+                    <div>
+                        <p>Good: {good}</p>
+                        <p>Neutral: {neutral}</p>
+                        <p>Bad: {bad}</p>
+                        <p>Total: {total}</p>
+                        <p>Positive feedback: {positive}%</p>
+                    </div> :
+                    <Notification message="There is no feedback"/>
+                }
+            </Section>
         )
     }
-}
 
 export default Statistics;
 

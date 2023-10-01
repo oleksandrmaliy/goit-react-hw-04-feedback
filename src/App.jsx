@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Feedback from './components/Feedback/';
 import Statistics from './components/Statistics/';
+// import Section from './components/SectionTitle';
+// import Notification from './components/Notification';
 
 
 
@@ -22,7 +24,7 @@ export class App extends Component {
     return Math.round((good * 100 ) / this.countTotalFeedback());
   }
 
-  handleButtonIncrement = (option) => {
+  onLeaveFeedback = (option) => {
         this.setState(prevState => (
          {[option]: prevState[option] + 1}
         ))
@@ -35,16 +37,18 @@ export class App extends Component {
     return (
       <div>
         <Feedback
-          handleButtonIncrement={this.handleButtonIncrement}
+          onLeaveFeedback={this.onLeaveFeedback}
           options={Object.keys(this.state)}
         />
+
         
-        {(this.countTotalFeedback() > 0) && <Statistics
+        <Statistics
           good={good}
           neutral={neutral}
           bad={bad}
           total={this.countTotalFeedback()}
-          positive={this.countPositiveFeedbackPercentage()} />}
+          positive={this.countPositiveFeedbackPercentage()} /> 
+
       </div>
     )
   }
